@@ -1,10 +1,14 @@
-import { registerPlugin } from '@capacitor/core';
+import { WebPlugin } from '@capacitor/core';
 
-import type { DebuggingModePlugin } from './definitions';
+export class Debugging extends WebPlugin {
+  async isUsbDebuggingEnabled() {
+    return {
+      isUsbDebugging: false,
+      isWirelessAdbEnabled: false
+    };
+  }
+}
 
-const DebuggingMode = registerPlugin<DebuggingModePlugin>('DebuggingMode', {
-  web: () => import('./web').then((m) => new m.DebuggingModeWeb()),
-});
+const DebuggingMode = new Debugging();
 
-export * from './definitions';
 export { DebuggingMode };
