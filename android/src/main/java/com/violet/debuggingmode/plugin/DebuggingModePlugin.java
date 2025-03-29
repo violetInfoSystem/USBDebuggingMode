@@ -13,7 +13,7 @@ public class DebuggingModePlugin extends Plugin {
 
    
     @PluginMethod
-    public void isUsbDebuggingEnabled(PluginCall call) {
+    public void DebuggingEnabled(PluginCall call) {
         try {
             Context context = getActivity(); 
 

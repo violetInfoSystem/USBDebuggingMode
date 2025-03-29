@@ -1,10 +1,11 @@
 import { WebPlugin } from '@capacitor/core';
-
-import type { DebuggingModePlugin } from './definitions';
+import { DebuggingModePlugin } from './index';
 
 export class DebuggingModeWeb extends WebPlugin implements DebuggingModePlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async DebuggingEnabled(): Promise<{ usbDebuggingEnabled: boolean; wirelessAdbEnabled: boolean }> {
+    return {
+      usbDebuggingEnabled: false,
+      wirelessAdbEnabled: false
+    };
   }
 }

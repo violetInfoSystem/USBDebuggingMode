@@ -1,11 +1,5 @@
 package com.violet.debuggingmode.plugin;
 
-import android.util.Log;
+import com.getcapacitor.BridgeActivity;
 
-public class DebuggingMode {
-
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
-    }
-}
+public class DebuggingMode extends BridgeActivity { }
