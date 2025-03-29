@@ -1,0 +1,25 @@
+{
+  "api": {
+    "name": "DebuggingModePlugin",
+    "slug": "debuggingmodeplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "DebuggingEnabled",
+        "signature": "() => Promise<{ usbDebuggingEnabled: boolean; wirelessAdbEnabled: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ usbDebuggingEnabled: boolean; wirelessAdbEnabled: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "debuggingenabled"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
